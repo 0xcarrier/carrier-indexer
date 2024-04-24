@@ -1,0 +1,49 @@
+{
+  "name": "bridge-indexer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p ./tsconfig.json",
+    "api-server": "node --max-old-space-size=500 dist/server/index.js",
+    "subscribe": "node --max-old-space-size=500 dist/subscriber/index.js",
+    "vaa-poller": "node --max-old-space-size=500 dist/vaa-poller/index.js",
+    "evm-poller": "node --max-old-space-size=500 dist/evm-poller/index.js",
+    "poll-vaa": "node --max-old-space-size=500 dist/cronjob/index.js",
+    "tasks": "node -r ts-node/register --max-old-space-size=500 src/tasks/index.ts",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@automata-network/cctp-sdk": "^1.0.31",
+    "@coral-xyz/anchor": "^0.29.0",
+    "@ethersproject/web": "file:src/utils/web",
+    "@metaplex-foundation/js": "^0.17.10",
+    "@polkadot/api": "^10.9.1",
+    "@solana/web3.js": "^1.70.1",
+    "axios": "^1.6.2",
+    "bignumber.js": "^9.1.2",
+    "bn.js": "^5.2.1",
+    "bs58": "^5.0.0",
+    "cron": "^2.1.0",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "prom-client": "^14.2.0"
+  },
+  "devDependencies": {
+    "@polkadot/api-augment": "^10.9.1",
+    "@types/cron": "^2.0.0",
+    "@types/express": "^4.17.15",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^18.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}

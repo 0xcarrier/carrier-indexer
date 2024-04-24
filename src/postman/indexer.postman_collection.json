@@ -1,0 +1,122 @@
+{
+  "info": {
+    "_postman_id": "77d951c1-61b6-4d3b-b2de-0014e7cd346c",
+    "name": "Bridge Indexer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all transactions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "hash",
+            "value": "sdf",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:27001/api/v1/transactions/?txn=0x46e00db82e3f242e91c7a94e97bdd8133fd1d287134f97f545a707fa1912e5d0&sourceChain=6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "27001",
+          "path": ["api", "v1", "transactions", ""],
+          "query": [
+            {
+              "key": "txn",
+              "value": "0x46e00db82e3f242e91c7a94e97bdd8133fd1d287134f97f545a707fa1912e5d0"
+            },
+            {
+              "key": "sourceChain",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get transactions of a wallet by chain",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "hash",
+            "value": "sdf",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:27001/api/v1/transactions/2/0xD846B447B80174e908B9288aF81428A8D60f456b",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "27001",
+          "path": ["api", "v1", "transactions", "2", "0xD846B447B80174e908B9288aF81428A8D60f456b"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get redeem transaction",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "hash",
+            "value": "sdf",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:27001/api/v1/redeems",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "27001",
+          "path": ["api", "v1", "redeems"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get token info",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "hash",
+            "value": "sdf",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:27001/api/v1/tokens/0x076c0482a1814b1e97fd2e6742f1ab4c87c6e36b",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "27001",
+          "path": ["api", "v1", "tokens", "0x076c0482a1814b1e97fd2e6742f1ab4c87c6e36b"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get token info by chain",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:27001/api/v1/tokens/1/0x076c0482a1814b1e97fd2e6742f1ab4c87c6e36b",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "27001",
+          "path": ["api", "v1", "tokens", "1", "0x076c0482a1814b1e97fd2e6742f1ab4c87c6e36b"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

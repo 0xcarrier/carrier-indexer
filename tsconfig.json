@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "strict": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "resolveJsonModule": true
+  },
+  "lib": ["es2015"],
+  "include": [
+    "src/evm-poller/index.ts",
+    "src/vaa-poller/index.ts",
+    "src/cronjob/index.ts",
+    "src/subscriber/index.ts",
+    "src/server/index.ts"
+  ]
+}
